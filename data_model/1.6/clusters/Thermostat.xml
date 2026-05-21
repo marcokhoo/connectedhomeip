@@ -1209,6 +1209,33 @@ Davis, CA 95616, USA
       </mandatoryConform>
     </attribute>
   </attributes>
+      <attribute id="0x0057" name="CoolingDemand" type="uint8">
+      <access read="true" readPrivilege="view"/>
+      <quality reportable="true"/>
+      <optionalConform>
+        <feature name="COOL"/>
+      </optionalConform>
+      <constraint>
+        <between>
+          <from value="0"/>
+          <to value="100"/>
+        </between>
+      </constraint>
+    </attribute>
+    </attributes>
+      <attribute id="0x0058" name="HeatingDemand" type="uint8">
+      <access read="true" readPrivilege="view"/>
+      <quality reportable="true"/>
+      <optionalConform>
+        <feature name="HEAT"/>
+      </optionalConform>
+      <constraint>
+        <between>
+          <from value="0"/>
+          <to value="100"/>
+        </between>
+      </constraint>
+    </attribute>
   <commands>
     <command id="0x00" name="SetpointRaiseLower" direction="commandToServer" response="Y">
       <access invokePrivilege="operate"/>
@@ -1466,3 +1493,4 @@ Davis, CA 95616, USA
     </event>
   </events>
 </cluster>
+
